@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memayama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .login-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .login-main h2 {
+            display: none;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: left;
+            order: -1;
+        }
+
+        .form-group input,
+        .form-group a {
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 3px;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .form-group input {
+            border: 1px solid #ccc;
+        }
+
+        .form-group a {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+            padding: 8px;
+            border-radius: 3px;
+        }
+
+        .form-group a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .top-right-text {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 21pt;
+        }
+
+        .text {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #000000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-main">
+    <form class="login-form">
+        <div class="form-group">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+        </div>
+
+        <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+
+        <div class="form-group">
+            <a href="https://example.com" id="login-link">Login</a>
+        </div>
+
+        <div class="text">
+            Find
+            <a href="https://example.com" id="find-username">Username</a>
+            or
+            <a href="https://example.com" id="find-password">Password</a>
+        </div>
+
+        <div class="form-group"></div>
+
+        <div class="form-group">
+            <a href="https://example.com" id="create-account">Create account</a>
+        </div>
+    </form>
+    <a href="https://example.com" class="top-right-text">memayama</a>
+</div>
+
+</body>
+</html> 
+<!-- 주석 ~ -->
