@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="categorystyle.css">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <i class="fa fa-bars menu-icon" onclick="openMenu()"></i>
+    <div id="container">
+        <div id="close" onclick="closeMenu()">&#10133;</div>
+        <ul id="menu">
+            <li onclick="toggleSubCategories(this)" class="curser">   
+                SHOP
+                <!-- 세부 카테고리 목록 -->
+                <ul class="sub-categories">
+                    <li>
+                        <a href="../ALL_page/ALL_page.html">ALL</a>
+                    </li>
+                    <li>
+                        <a href="../OUTWEAR_page/OUTWEAR_page.html">OUTWEAR</a>
+                    </li>
+                    <li>
+                        <a href="../TOP_page/TOP_page.html">TOP</a>
+                    </li>
+                    <li>
+                        <a href="../BOTTOM_page/BOTTOM_page.html">BOTTOM</a>
+                    </li>
+                    <li>
+                        <a href="../ACC_page/ACC_page.html">ACC</a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li onclick="toggleSubCategories(this)", class="curser">
+                COLLECTION
+                <!-- 자동으로 추가 할 수 있게끔 구현해야함 -->
+                <ul class="sub-categories">
+                    <li>
+                        <a href="https://naver.com">22 S/S</a>
+                    </li>
+                    <li>
+                        <a href="https://naver.com">22 F/W</a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li>
+                <!--notice 페이지 구현 후 링크 연결하기-->
+                <a href="../notice_page/notice_page.html">NOTICE</a>
+            </li>
+
+
+            <li>
+                <!--로그인 페이지 연결시키기-->
+                <a href="../login_page/loginpage_1.html">LOGIN</a>
+            </li>
+
+
+            <li>
+                <a href="../my_page/my_page.html">MY PAGE</a>
+            </li>
+
+
+            <li>
+                SEARCH
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function openMenu(){
+            document.getElementById('container').style.left='0%';
+            document.getElementById('menu').style.opacity='1';
+        }
+        function closeMenu(){
+            document.getElementById('container').style.left='-200px';
+            document.getElementById('menu').style.opacity='0';
+        }
+        function toggleSubCategories(element) {
+            const subCategories = element.querySelector('.sub-categories');
+            // 토글 동작
+            if (subCategories.style.display === 'none' || subCategories.style.display === '') {
+                subCategories.style.display = 'block';
+            } else {
+                subCategories.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+
